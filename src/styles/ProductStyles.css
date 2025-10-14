@@ -1,0 +1,101 @@
+.page-contents {
+  margin: 0px;
+  padding: 0px;
+}
+#full-products-page {
+  height: 100%;
+  width:  100%;
+  display: flex;
+  flex-direction: column;
+}
+#product-title-part {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+}
+#product-filters-btn-wrapper {
+  display: flex;
+  flex: 0 0 40px;
+  width: 40px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#product-filters-toggle-btn {
+  display: flex;
+  box-sizing: border-box;
+  background-color: var(--nav-bg);
+  border-radius: 20px;
+  padding: 2px;
+}
+#product-headings {
+  display: flex;
+  flex: 1 1 auto;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0px;
+}
+.product-sorting-filters-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 20px;
+}
+#product-details {
+  position: relative;
+}
+#details-sidebar {
+  position: absolute;
+  top: 0;
+  left: -240px;
+  width: 240px;
+  height: 100%;
+  background-color: var(--sidebar-bg);
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.12);
+  transition: left 0.3s ease;
+  overflow: auto;
+  z-index: 1;
+}
+#product-details.sidebar-open #details-sidebar {
+  left: 0;
+}
+.details-content {
+  transition: margin-left .3s ease;
+}
+#product-details.sidebar-open .details-content {
+  margin-left: 240px; 
+}
+/* Mobile view: max width 600px */
+/* Mobile view: max width 600px */
+@media (max-width: 600px) {
+  #details-sidebar {
+    position: absolute;   /* contained inside #product-details */
+    top: 0;
+    left: -240px;         /* hidden by default */
+    width: 240px;
+    height: 100%;
+    background-color: var(--sidebar-bg);
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.25);
+    transition: left 0.3s ease;
+    z-index: 999;         /* float above content */
+    overflow: auto;
+  }
+
+  /* When sidebar is open */
+  #product-details.sidebar-open #details-sidebar {
+    left: 0;
+  }
+
+  /* Content stays full width (doesn't shift) */
+  #product-details .details-content {
+    margin-left: 0 !important;
+    width: 100%;
+    transition: none;
+  }
+}

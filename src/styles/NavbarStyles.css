@@ -1,0 +1,159 @@
+.navbar {
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  background-color: var(--nav-bg);
+  display: flex;
+  text-decoration: none;
+  margin: 0;
+  padding: 10px 4px;
+  line-height: 1;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+}
+
+.nav-list {
+  display: flex;
+  text-decoration: none;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-item a{
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--btn-txt);
+}
+
+.nav-toggle-theme-btn {
+  border-radius: 50%;
+  padding: 3px 6px;
+  margin-right: 20px;
+  color: var(--btn-txt);
+  background-color: var(--btn-bg);
+}
+
+.nav-btn-list {
+  display: flex;
+  margin-left: auto;
+  gap: 15px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-btn-item a{
+  text-decoration: none;
+  border-radius: 15px;
+  color: var(--btn-txt);
+  background-color: var(--btn-bg);
+  padding: 8px 12px;
+}
+
+.nav-btn-item:hover {
+  box-shadow: 0 2px 8px rgba(80, 0, 0, 0.07);
+  border: var(--primary-btn-hover-color);
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--btn-txt);
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* ------------------ MOBILE ------------------ */
+@media (max-width: 600px) {
+  .nav-hamburger {
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    z-index: 10000; /* stays above menu so it can close */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--btn-txt);
+    cursor: pointer;
+  }
+
+  /* By default keep menus hidden */
+  .nav-list,
+  .nav-btn-list {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    background: var(--nav-bg);
+    padding: 8px 4px;
+    margin: 12px 0 0;
+  }
+
+  /* When open, show both lists STACKED (push content down, no overlap) */
+  .nav-list.open,
+  .nav-btn-list.open {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  /* Stack items nicely */
+  .nav-item,
+  .nav-btn-item,
+  .nav-btn-item-2 {
+    list-style: none;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    width: 85%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* Button list specifics */
+  .nav-btn-list {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 22px;
+    gap: 12px;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  .nav-toggle-theme-btn {
+    margin: 0;
+    padding: 2px 6px;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    align-self: center;
+  }
+
+  .navbar {
+    position: relative;
+    min-height: 56px;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: auto;
+  }
+
+  .nav-btn-item , .nav-btn-item-2{
+    padding-left: 0;
+  }
+  .nav-btn-item {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 8px 0;
+  }
+  .nav-btn-item-2 button{
+    padding: 2px 4px;
+  }
+}

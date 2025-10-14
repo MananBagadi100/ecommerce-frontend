@@ -1,0 +1,38 @@
+#main-content-area {
+    margin: 10px 5px;
+    height: auto;
+}
+#sidebar-main-div {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+#category-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+#rating-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+#price-filter-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-filter-inputs {
+    width: 70px;
+    padding: 2px 4px;
+}
+
+#price-filter-options label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+#price-filter-warning {
+    color: red;
+    font-size: 12px;
+    margin-top: 8px;
+}

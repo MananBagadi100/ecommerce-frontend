@@ -1,0 +1,108 @@
+.register-full-page-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+.register-main-heading-container {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 8px 0 12px;
+}
+.register-content-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 12px 8px;
+    box-sizing: border-box;
+}
+.registration-form-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+.registration-form-heading {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px 16px 0 0 ;
+    background-color: var(--nav-bg);
+    color: var(--btn-txt);
+    box-sizing: border-box;
+}
+.registration-form-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: var(--form-body);
+    gap: 16px;
+    border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
+    padding: 24px 8px;
+}
+.registration-input-field-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.registration-input-field-wrapper input {
+    display: flex;
+    width: 75%;
+    height: 25px;
+    border-radius: 4px;
+}
+.userCredentials-error {
+    display: flex;
+    color: red;
+    justify-content: center;
+}
+.registration-submit-btn-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.registration-submit-btn {
+    color: var(--btn-txt);
+    background-color: var(--btn-bg);
+    border-radius: 16px;
+    padding: 8px 36px;
+}
+.field-errors {
+    color: red;
+}
+@media (min-width: 650px) {
+    .register-full-page-container {
+        align-items: center ;
+    }
+    .register-main-heading-container {
+        font-size: 24px;
+    }
+    .register-content-area {
+        width: 500px;
+    }   
+    .registration-form-heading {
+        font-size: 20px;
+    }
+    .registration-submit-btn {
+        padding: 8px 40px;
+        font-size: 15px;
+    }
+    .registration-submit-btn:hover {
+        background-color: var(--btn-hover-bg);
+    }
+}
