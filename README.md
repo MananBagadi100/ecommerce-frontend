@@ -167,18 +167,6 @@ Visit `http://localhost:5173` in your browser.
 
 ---
 
-## 📸 Screenshots
-
-*(Add screenshots of your application here)*
-
-- Dashboard/Homepage
-- Product Listing Page
-- Cart & Checkout
-- Order Confirmation
-- Admin/Dashboard (if applicable)
-
----
-
 ## 🧩 Author
 
 **👨‍💻 Manan Bagadi**
