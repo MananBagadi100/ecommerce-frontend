@@ -150,7 +150,6 @@ const Sidebar = ({
                         </form>
                     </div>
                 </div>
-            <div>hey how are you </div>
         </div>
     )
 }
