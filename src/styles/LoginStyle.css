@@ -7,7 +7,7 @@
 .login-content-area {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
   justify-content: center;
 }
@@ -125,6 +125,8 @@
 @media (min-width:650px) {
   .login-full-container {
     justify-content: center;
+    align-items: center;
+
   }
   .login-content-area {
     width: 450px;
