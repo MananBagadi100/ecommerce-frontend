@@ -1,6 +1,6 @@
 import '../styles/LoginStyle.css'
 import { useContext, useState } from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { LoginContext } from '../context/LoginContext'
 import { useForm } from 'react-hook-form'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -91,7 +91,7 @@ const Login= () => {
                                         value="Submit"
                                     />                   
                                 </div>
-                                <div className='registration-link'>New User ? <a href='/register'>Register Now !</a></div>
+                                <div className='registration-link'>New User ? <Link to='/register'>Register Now !</Link></div>
                                 
                             </form>
                         </div>
