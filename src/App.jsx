@@ -28,6 +28,7 @@ function App() {
       
       try {
         const answer = await axios.post(`${backendRouteURL}/api/auth/verify`,{},{withCredentials:true})
+        console.log('answer in app.jsx is ',answer)
         if(answer.data.isLoggedIn) {  //if true
           setLoginState(true)
         }
