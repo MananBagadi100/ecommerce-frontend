@@ -25,15 +25,20 @@ const Register = () => {
         }
         clearErrors("noMatch")
         console.log('The registration form data is ',data)
-        const ans = await axios.post(`${backendRouteURL}/api/register`,data,{withCredentials:true})
-        console.log(ans.data)
-        const LoginStatus = ans.data.isLoggedIn
-        if (LoginStatus) {
-            navigate('/')
-            setLoginState(true)
-        }
-        else {
+        try {
+            const ans = await axios.post(`${backendRouteURL}/api/register`,data,{withCredentials:true})
+            console.log(ans.data)
+            const LoginStatus = ans.data.isLoggedIn
+            if (LoginStatus) {
+                navigate('/')
+                setLoginState(true)
+            }
+            else {
             setServerError(`${ans.data.msg}`)
+            }
+        }
+        catch (error) {
+            console.log('There is some problem with the backend api call in Register.jsx',{errorObj : error})
         }
         return
     }

@@ -42,9 +42,11 @@ function App() {
             status: error.response.status,
             data: error.response.data,
           });
-        } else if (error.request) {
+        } 
+        else if (error.request) {
           console.log("No response received from backend:", error.request);
-        } else {
+        } 
+        else {
           console.log("Error setting up request:", error.message);
         }
       }
