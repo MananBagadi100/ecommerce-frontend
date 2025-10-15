@@ -33,9 +33,21 @@ function App() {
           setLoginState(true)
         }
       }
+      // catch (error) {
+      //   console.log({errorCause :"Some error occured while checking for login when mounting the app",errorMsgAxios : error })
+      // } 
       catch (error) {
-        console.log({errorCause :"Some error occured while checking for login when mounting the app",errorMsgAxios : error })
-      } 
+        if (error.response) {
+          console.log("Backend responded with error:", {
+            status: error.response.status,
+            data: error.response.data,
+          });
+        } else if (error.request) {
+          console.log("No response received from backend:", error.request);
+        } else {
+          console.log("Error setting up request:", error.message);
+        }
+      }
     }
     checkAuth()
   },[])
