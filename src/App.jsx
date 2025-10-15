@@ -33,7 +33,7 @@ function App() {
         }
       }
       catch (error) {
-        console.log("Some error occured while checking for login when mounting the app",error)
+        console.log({errorCause :"Some error occured while checking for login when mounting the app",errorMsgAxios : error })
       } 
     }
     checkAuth()
