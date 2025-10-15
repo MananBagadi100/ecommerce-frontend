@@ -25,14 +25,15 @@ function App() {
   const backendRouteURL = import.meta.env.VITE_BACKEND_ROUTE;
   useEffect(() => {
     const checkAuth = async () => {
-      const answer = await axios.post(`${backendRouteURL}/api/auth/verify`,{},{withCredentials:true})
+      
       try {
+        const answer = await axios.post(`${backendRouteURL}/api/auth/verify`,{},{withCredentials:true})
         if(answer.data.isLoggedIn) {  //if true
           setLoginState(true)
         }
       }
       catch (error) {
-        console.log("Some error occured",error)
+        console.log("Some error occured while checking for login when mounting the app",error)
       } 
     }
     checkAuth()
