@@ -27,15 +27,15 @@ function App() {
     const checkAuth = async () => {
       
       try {
-        const answer = await axios.post(`${backendRouteURL}/api/auth/verify`,{},{withCredentials:true})
+        const answer = await axios.post(`${backendRouteURL}/api/authCheck`,{},{withCredentials:true})
         console.log('answer in app.jsx is ',answer)
-        if(answer.data.isLoggedIn) {  //if true
+        if(answer.data.isLoggedIn) {  //if token is correct
           setLoginState(true)
         }
+        else {
+          setLoginState(false)  //if new user or token has been tampered
+        }
       }
-      // catch (error) {
-      //   console.log({errorCause :"Some error occured while checking for login when mounting the app",errorMsgAxios : error })
-      // } 
       catch (error) {
         if (error.response) {
           console.log("Backend responded with error:", {
