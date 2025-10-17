@@ -2,9 +2,9 @@
 
 > A full-stack e-commerce platform built with modern web technologies, featuring secure authentication, a complete checkout workflow, and a responsive UI. Perfect for showcasing full-stack development skills.
 
-**Live Demo**: [https://myecommerce-frontend.vercel.app](https://myecommerce-frontend.vercel.app)
+**Live Demo**: [https://ecommerce-frontend-six-ruby.vercel.app/](https://ecommerce-frontend-six-ruby.vercel.app/)
 
-**Backend Repository**: [ecommerce-backend](https://github.com/your-username/ecommerce-backend)
+**Backend Repository**: [ecommerce-backend](https://github.com/MananBagadi100/ecommerce-backend)
 
 ---
 
@@ -87,7 +87,7 @@ The project uses a normalized MySQL database with the following tables:
 | **orders** | Stores order information |
 | **order_items** | Stores individual items in each order |
 
-For detailed schema information, see [Backend README](https://github.com/your-username/ecommerce-backend).
+For detailed schema information, see [Backend README](https://github.com/MananBagadi100/ecommerce-backend).
 
 ---
 
@@ -103,11 +103,11 @@ For detailed schema information, see [Backend README](https://github.com/your-us
 
 ```bash
 # Clone frontend
-git clone https://github.com/your-username/ecommerce-frontend.git
+git clone https://github.com/MananBagadi100/ecommerce-frontend.git
 cd ecommerce-frontend
 
 # Clone backend (in separate folder)
-git clone https://github.com/your-username/ecommerce-backend.git
+git clone https://github.com/MananBagadi100/ecommerce-backend.git
 cd ecommerce-backend
 ```
 
@@ -152,7 +152,7 @@ Visit `http://localhost:5173` in your browser.
 1. Push frontend code to GitHub
 2. Go to [Vercel](https://vercel.com) and create a new project
 3. Import your frontend repository
-4. Add environment variable: `VITE_API_URL=https://your-backend.onrender.com`
+4. Add environment variable: `VITE_API_URL=https://ecommerce-backend.onrender.com (replace with your actual backend deployment URL if different)`
 5. Deploy
 
 ### Backend (Render)
