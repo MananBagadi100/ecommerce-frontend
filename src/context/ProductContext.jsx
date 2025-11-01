@@ -22,6 +22,18 @@ export const ProductProvider = ({children}) => {
     //     }
     // }
 
+    //filtering logic
+    function applyFilters (selectedCategories,minRating,priceRange,sorting,searchText) {
+        let result = [...allProducts]
+        if (selectedCategories.length !== 0) {
+            result = result.filter((product) => selectedCategories.some((i) => i.slug === product.category))
+        }
+        console.log("The result after FILTERING is ",result)
+        setFilteredProducts(result)
+    }
+    useEffect (() => {
+        applyFilters(selectedCategories,minRating,priceRange,sorting,searchText)
+    },[selectedCategories,minRating,priceRange,sorting,searchText])
     return (
         <ProductContext.Provider value={{
             allProducts,

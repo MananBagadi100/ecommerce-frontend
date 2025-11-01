@@ -5,16 +5,16 @@ const CategoryFilters = () => {
     const [categoryNames , setCategoryNames] = useState([])
     const {selectedCategories , setSelectedCategories} = useContext(ProductContext)
 
-    function handleCheckboxChange (categoryName) {
-        const exists = selectedCategories.find((i) => categoryName === i)  
+    function handleCheckboxChange (category) {
+        const exists = selectedCategories.find((i) => category.slug === i.slug)  
         if (exists) {   //we need to uncheck the box and remove that category name from the state
             setSelectedCategories((prev) => {
-                return prev.filter((i) => i !== categoryName)
+                return prev.filter((i) => i.slug !== category.slug)
             })
         }
         else {  //we need to check the box and add that category name
             setSelectedCategories((prev) => {
-                return [...prev, categoryName]
+                return [...prev, {name: category.name, slug: category.slug}]
             })
         }
     }
@@ -22,7 +22,13 @@ const CategoryFilters = () => {
         const fetchData = async () => {
             const response = await(await getProductCategories()).data
             console.log('the category is ',response)
-            setCategoryNames(response.map((item) => item.slug))
+
+            setCategoryNames(response.map((item) => {
+                return {
+                    "slug": item.slug,
+                    "name": item.name
+                }
+            }))
         }
         fetchData()
     },[])
@@ -32,14 +38,14 @@ const CategoryFilters = () => {
             <div className="category-heading">Categories</div>
             <div className="cateogory-list">
                 {
-                    categoryNames.map((categoryName) => (
-                        <div className="cateogory-row" key={categoryName}>
+                    categoryNames.map((category) => (
+                        <div className="cateogory-row" key={category.name}>
                             <input 
                                 type="checkbox"
-                                checked={selectedCategories.find(item => item === categoryName) ? true : false} 
-                                onChange={() => handleCheckboxChange(categoryName)}
+                                checked={selectedCategories.find(item => item.slug === category.slug) ? true : false} 
+                                onChange={() => handleCheckboxChange(category)}
                             />
-                            <label>{categoryName}</label>
+                            <label>{category.name}</label>
                         </div>
                     ))
                 }

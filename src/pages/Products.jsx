@@ -161,6 +161,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Sidebar from "../components/Sidebar";
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import { getAvailableProducts } from "../services/GetService";
+import ProductList from "../components/ProductList";
 const Products = () => {
     const isMobile = useMediaQuery('(max-width: 650px)')
     const [ isDrawerOpen , setIsDrawerOpen ] = useState(false)
@@ -168,7 +169,6 @@ const Products = () => {
     useEffect (() => {
         const fetchData = async () => {
             const response = await(await getAvailableProducts()).data
-            console.log("the response is ",response.products)
             setAllProducts(response.products.map((item) => item))   //storing all products
         }
         fetchData()
@@ -191,6 +191,7 @@ const Products = () => {
                         <SwipeableDrawer 
                             anchor="left"
                             open={isDrawerOpen}
+                            onOpen={() => setIsDrawerOpen(true)}
                             onClose={() => setIsDrawerOpen(false)}
                             slotProps={{ paper: { sx: { width: 250 , backgroundColor : 'bisque'} } }}
                         >
@@ -201,7 +202,13 @@ const Products = () => {
                     )
                 }
             </div>
-            <div className="products-grid">The products come here</div>
+            <div className="products-main-content-area">
+                <div className="products-main-heading">Available Products</div>
+                <div className="products-display-area">
+                    <ProductList />
+                </div>
+            </div>
+                
         </div>
     )
 }
