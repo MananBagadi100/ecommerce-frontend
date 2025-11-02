@@ -1,4 +1,4 @@
-.product-grid {
+/* .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
@@ -41,8 +41,6 @@
 }
 
 .product-card div {
-  /* font-size: 15px; */
-  /* color: var(--text-color); */
   margin-bottom: 5px;
   text-align: center;
 }
@@ -72,4 +70,4 @@
 .cart-btn:hover {
   border: var(--primary-btn-hover-color);
 }
-
+ */

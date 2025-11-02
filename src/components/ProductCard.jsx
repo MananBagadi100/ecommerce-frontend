@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom'
 import '../styles/ProductCardStyles.css'
+import StarIcon from '@mui/icons-material/Star';
 const ProductCard = ({product}) => {
     return (
-        <Link className="productCard-wrapper">
+        <Link className="productCard-wrapper" key={product.id}>
             <div className="productCard-container" key={product.id}>
-                <img src={product.images[0]} className="productCard-image"/>
+                <div className="product-image-wrapper">
+                    <img src={product.images[0]} className="product-image"/>
+                </div>
                 <div className="productCard-details">
-                    <div className="productId">{product.id}</div>
-                    <div className="productName">{product.title}</div>
-                    <div className="productPrice">{product.price}</div>
-                    <div className="productRating">{product.rating}</div>
-                    <div className="productBrand">{product.brand}</div>
+                    <div className="product-id">{product.id}</div>
+                    <div className="product-title">{product.title}</div>
+                    <div className="product-price">{product.price}</div>
+                    <div className="product-rating">{product.rating}⭐</div>
+                    <div className="product-brand">{product.brand}</div>
                 </div>
             </div>
         </Link>

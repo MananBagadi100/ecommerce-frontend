@@ -5,7 +5,7 @@ import { cartContext } from "../context/CartContext";   //name of portal
 import { Link, NavLink } from "react-router-dom";
 // import Sidebar from "../components/Sidebar";
 import { ProductContext } from "../context/ProductContext";
-import RenderProducts from "../components/RenderProducts";
+// import RenderProducts from "../components/RenderProducts";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 // import Drawer from '@mui/material/Drawer'
