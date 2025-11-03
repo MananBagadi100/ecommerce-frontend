@@ -33,7 +33,7 @@ export const ProductProvider = ({children}) => {
     }
     useEffect (() => {
         applyFilters(selectedCategories,minRating,priceRange,sorting,searchText)
-    },[selectedCategories,minRating,priceRange,sorting,searchText])
+    },[selectedCategories,minRating,priceRange,sorting,searchText,allProducts])
     return (
         <ProductContext.Provider value={{
             allProducts,

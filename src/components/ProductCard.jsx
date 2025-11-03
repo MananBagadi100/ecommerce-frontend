@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import '../styles/ProductCardStyles.css'
-import StarIcon from '@mui/icons-material/Star';
 const ProductCard = ({product}) => {
     return (
         <Link className="productCard-wrapper" key={product.id}>
