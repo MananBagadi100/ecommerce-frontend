@@ -3,11 +3,12 @@
     grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
     gap: 20px 12px;
     width: 100%;
+    /* max-width: 2000px; */
     box-sizing: border-box;
 }
 @media (min-width: 650px) {
     .products-grid {
          grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-         gap: 16px 12px; 
+         gap: 16px 12px;
     }
 } 

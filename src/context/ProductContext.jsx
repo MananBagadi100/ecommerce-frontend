@@ -5,7 +5,7 @@ export const ProductProvider = ({children}) => {
     const [allProducts , setAllProducts] = useState([])
     const [searchText , setSearchText] = useState('')
     const [selectedCategories , setSelectedCategories] = useState([])
-    const [minRating , setMinRating] = useState(null) 
+    const [minRating , setMinRating] = useState(0) 
     const [priceRange , setPriceRange] = useState(['','']) 
     const [sorting , setSorting] = useState('')
     const [filteredProducts , setFilteredProducts] = useState([])
@@ -27,6 +27,9 @@ export const ProductProvider = ({children}) => {
         let result = [...allProducts]
         if (selectedCategories.length !== 0) {
             result = result.filter((product) => selectedCategories.some((i) => i.slug === product.category))
+        }
+        if (minRating !== 0) {
+            result = result.filter((product) => product.rating > minRating)
         }
         console.log("The result after FILTERING is ",result)
         setFilteredProducts(result)

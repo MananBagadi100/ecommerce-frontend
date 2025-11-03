@@ -157,6 +157,7 @@
 import '../styles/SidebarStyles.css'
 import CategoryFilters from './filters/CategoryFIlters';
 import CloseIcon from '@mui/icons-material/Close';
+import RatingFilter from './filters/RatingFilters';
 const Sidebar = ({setIsDrawerOpen,isMobile}) => {
     return (
         <div className="sidebar-full-container">
@@ -176,8 +177,9 @@ const Sidebar = ({setIsDrawerOpen,isMobile}) => {
                 </div>
                 <div className="sidebar-categories">
                     <CategoryFilters />
+                    <RatingFilter />
                 </div>
-                <div> hey this is sidebar</div>
+                <div > hey this is sidebar</div>
                 
             </div>
             

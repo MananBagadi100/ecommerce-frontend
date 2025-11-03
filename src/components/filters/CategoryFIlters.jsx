@@ -50,7 +50,6 @@ const CategoryFilters = () => {
                     ))
                 }
             </div>
-            hello wrdl
         </div>
     )
 }
