@@ -30,6 +30,11 @@ export const ProductProvider = ({children}) => {
         }
         if (minRating !== 0) {
             result = result.filter((product) => product.rating > minRating)
+        } 
+        if (priceRange[0] !== '' || priceRange[1] !== '') {
+            const min = priceRange[0] === '' ? 0 : Number(priceRange[0])
+            const max = priceRange[1] === ''? Infinity : Number(priceRange[1])
+            result = result.filter((product) => min < product.price && product.price < max)
         }
         console.log("The result after FILTERING is ",result)
         setFilteredProducts(result)
