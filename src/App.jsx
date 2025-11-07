@@ -5,10 +5,7 @@ import About from './pages/About'
 import ContactUs from './pages/ContactUs'
 import Login from './pages/Login'
 import Products from './pages/Products.jsx'
-import OutofStock from './components/OutofStock'
 import Navbar from './components/Navbar'
-import UserDetails from './components/UserDetails'
-import Admin from './components/Admin'
 import Cart from './components/Cart'
 import ProductDetails from './components/ProductDetails.jsx'
 import Checkout from './components/Checkout.jsx'
@@ -64,7 +61,6 @@ function App() {
                     <Route path='/' element={<Home />} />
                     <Route path='/products' element={<Products />} />
                     <Route path='/products/:product_id' element={<ProductDetails />} />
-                    <Route path='/products/out-of-stock' element={<OutofStock />} />
                     <Route path='/about-us' element={<About />} />
                     <Route path='/contact-us' element={<ContactUs />} />
                     <Route path='/cart' element={<Cart />} />

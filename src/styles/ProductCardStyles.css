@@ -4,10 +4,6 @@
     box-sizing: border-box;
     border: 1px solid black;
     border-radius: 12px;
-    /* height: 100%;
-    max-height: 420px;
-    max-width: 400px; */
-    /* max-width: 350px; */
     background-color: var(--product-card-bg-color);
 }
 .product-image-wrapper {

@@ -4,7 +4,6 @@ import { ProductContext } from "../../context/ProductContext"
 const PriceFilters = () => {
     const {priceRange,setPriceRange} = useContext(ProductContext)
     function updatePriceRange (index,e) {
-        setPriceRangeError('')
         const temp = e.target.value         //storing the unchanged price 
         if (index === 0) {  //changing the lower price range
             setPriceRange([temp,priceRange[1]])

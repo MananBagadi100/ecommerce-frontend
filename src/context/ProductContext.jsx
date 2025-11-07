@@ -9,19 +9,7 @@ export const ProductProvider = ({children}) => {
     const [priceRange , setPriceRange] = useState(['','']) 
     const [sorting , setSorting] = useState('')
     const [filteredProducts , setFilteredProducts] = useState([])
-
-    // const [sort , setSort] = useState('')
-    // function SortProducts (productsArray) {
-    //     const arr = [...productsArray]
-    //     switch(sort) {
-    //         case 'price_asc' : return arr.sort((a,b) => a.price - b.price)
-    //         case 'price_desc' : return arr.sort((a,b) => b.price - a.price)
-    //         case 'rating_asc' : return arr.sort((a,b) => a.rating - b.rating)
-    //         case 'rating_desc' : return arr.sort((a,b) => b.rating - a.rating)
-    //         default : return arr
-    //     }
-    // }
-
+    
     //filtering logic
     function applyFilters (selectedCategories,minRating,priceRange,sorting,searchText) {
         let result = [...allProducts]

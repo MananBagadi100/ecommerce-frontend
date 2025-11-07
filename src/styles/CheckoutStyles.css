@@ -172,13 +172,6 @@
     height: 100%;
     display: flex;
 }
-/* #info-box-address-label-wrapper textarea {
-    display: flex;
-    height: 100%;
-    flex: 1 1 auto;
-    overflow-y: scroll;
-    box-sizing: border-box;
-} */
 #info-box-place-order-btn-wrapper {
     display: flex;
     justify-content: center;

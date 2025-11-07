@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { getProductDetails } from "../services/GetService";
 import { useContext, useEffect, useState } from "react";
-import '../styles/ProDetailsStyles.css'
+import '../styles/ProductDetailsStyles.css'
 import { cartContext } from "../context/CartContext";
 const ProductDetails = () => {
     const value=useContext(cartContext)
