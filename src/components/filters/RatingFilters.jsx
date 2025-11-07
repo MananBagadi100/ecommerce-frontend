@@ -5,7 +5,7 @@ const RatingFilter = () => {
     console.log('the min rating is ',minRating)
     return (
         <div className="rating-full-container">
-            <div className="minRating-heading">Ratings</div>
+            <div className="minRating-heading" style={{fontWeight:'bold'}}>Ratings</div>
             <form className="minRating-list">
                 <input 
                     type="radio"

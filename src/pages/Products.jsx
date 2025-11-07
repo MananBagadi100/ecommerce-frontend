@@ -165,7 +165,7 @@ import ProductList from "../components/ProductList";
 const Products = () => {
     const isMobile = useMediaQuery('(max-width: 650px)')
     const [ isDrawerOpen , setIsDrawerOpen ] = useState(false)
-    const {allProducts,setAllProducts} = useContext(ProductContext)
+    const {allProducts,setAllProducts,searchText,setSearchText} = useContext(ProductContext)
     useEffect (() => {
         const fetchData = async () => {
             const response = await(await getAvailableProducts()).data
@@ -193,7 +193,7 @@ const Products = () => {
                             open={isDrawerOpen}
                             onOpen={() => setIsDrawerOpen(true)}
                             onClose={() => setIsDrawerOpen(false)}
-                            slotProps={{ paper: { sx: { width: 250 , backgroundColor : 'bisque'} } }}
+                            slotProps={{ paper: { sx: { width: 250 , backgroundColor : 'var(--sidebar-filters-bg)'} } }}
                         >
                             <Sidebar setIsDrawerOpen={setIsDrawerOpen} isMobile={isMobile}/>
                         </SwipeableDrawer>
@@ -204,6 +204,14 @@ const Products = () => {
             </div>
             <div className="products-main-content-area">
                 <div className="products-main-heading">Available Products</div>
+                <div className="products-search-bar-wrapper">
+                    <input
+                        className="products-search-bar"
+                        type="text"
+                        placeholder="Search products here ..."
+                        onChange={(e) => setSearchText(e.target.value)}
+                    />
+                </div>
                 <div className="products-display-area">
                     <ProductList />
                 </div>

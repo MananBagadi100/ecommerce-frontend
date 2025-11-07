@@ -36,6 +36,25 @@ export const ProductProvider = ({children}) => {
             const max = priceRange[1] === ''? Infinity : Number(priceRange[1])
             result = result.filter((product) => min < product.price && product.price < max)
         }
+        if (searchText !== '') {
+            result = result.filter ((product) => product.title.toLowerCase().includes(searchText.toLowerCase()))
+        }
+        if (sorting !== '') {
+            switch (sorting) {
+                case "price_low_high": 
+                    result = result.sort((a,b) => a.price - b.price)
+                break
+                case "price_high_low":
+                    result = result.sort((a,b) => b.price - a.price)
+                break
+                case "rating_high_low":
+                    result = result.sort((a,b) => b.rating - a.rating)
+                break
+                case "rating_low_high":
+                    result = result.sort((a,b) => a.rating - b.rating)
+            }
+        }
+
         console.log("The result after FILTERING is ",result)
         setFilteredProducts(result)
     }

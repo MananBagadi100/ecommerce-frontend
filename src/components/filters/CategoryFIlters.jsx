@@ -35,7 +35,7 @@ const CategoryFilters = () => {
     console.log('the selected categories are',selectedCategories)
     return (
         <div className="category-full-container">
-            <div className="category-heading">Categories</div>
+            <div className="category-heading" style={{fontWeight:'bold'}}>Categories</div>
             <div className="cateogory-list">
                 {
                     categoryNames.map((category) => (

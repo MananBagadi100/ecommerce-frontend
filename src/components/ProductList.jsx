@@ -9,7 +9,7 @@ const ProductList = () => {
         <div className="products-grid">
             {
                 filteredProducts.map((product) => (
-                    <ProductCard product={product}/>
+                    <ProductCard product={product} key={product.id}/>
                 ))
             }
         </div>
