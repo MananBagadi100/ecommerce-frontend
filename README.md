@@ -4,6 +4,8 @@
 
 **Live Demo**: [https://ecommerce-frontend-six-ruby.vercel.app/](https://ecommerce-frontend-six-ruby.vercel.app/)
 
+**📹 Demo Video (3 minutes)**: https://youtu.be/rG5j4ppCDTM
+
 **Backend Repository**: [ecommerce-backend](https://github.com/MananBagadi100/ecommerce-backend)
 
 ---
