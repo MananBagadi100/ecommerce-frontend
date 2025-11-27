@@ -35,7 +35,7 @@
   height: 100%;
   object-fit: contain;
   border-radius: 16px;
-  background-color: var(--card-img-bg);
+  background-color: var(----prouduct-card-bg-color);
   box-sizing: border-box;
 }
 .product-content-wrapper {

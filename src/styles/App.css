@@ -1,20 +1,17 @@
 :root {
-    --bg-color: #ffffff;
+    --bg-color: #F8FAFD;
     --text-color: black;
     --nav-bg: #0E2954;
     --btn-bg: #4998e8;
     --btn-txt: #ffffff;
-    --btn-hover-bg: #387ec4;
-    --sidebar-filters-bg: rgb(166, 206, 247);
-    --primary-btn-hover-color: 1px solid blue;
+    --btn-hover-bg: #3f8cda;
+    --sidebar-filters-bg: #e3f0ff;
     --product-card-bg-color: #e3f0ff;  /* Each Product or Card bg */
     --card-border: #010101;
     --card-shadow: rgba(21,92,54,0.09);
     --card-shadow-hover: rgba(21,92,54,0.16);
-    --card-img-bg: #cae4ff;
     --product-prices-color:rgb(32, 96, 136);
-    --loading-animation-color:black;
-    --top-categories-bg: #fff7e6;
+    --top-categories-bg: #F8FAFD;
     --form-body: #bbdeff;
 }
 html,body,:root {
@@ -37,21 +34,17 @@ html,body,:root {
     margin-top: 0px;            /*so that big headings dont eat space on the top*/
 }
 .dark-theme {
-    /* --bg-color: rgb(159, 159, 159); */
     --bg-color: rgb(0, 14, 46);
     --text-color: rgb(214, 213, 213);
     --nav-bg: rgb(32, 62, 134);
     --btn-bg: rgb(57, 124, 196);
     --btn-txt: #edeeee;
     --btn-hover-bg: #033e5a;
-    --primary-btn-hover-color: 1px solid rgb(68, 68, 231);
     --product-card-bg-color: #a7c8dc;  /* Each Product or Card bg */
     --card-border: #0f0b29;
     --card-shadow: rgba(21,92,54,0.09);
     --card-shadow-hover: rgba(21,92,54,0.16);
-    --card-img-bg: #8bbbd6;
     --product-prices-color:rgb(43, 43, 43);
-    --loading-animation-color: rgb(222, 222, 222);
     --top-categories-bg: rgb(79, 96, 135);
 }
 html, body {

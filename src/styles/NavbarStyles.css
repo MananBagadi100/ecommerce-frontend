@@ -55,7 +55,7 @@
 
 .nav-btn-item:hover {
   box-shadow: 0 2px 8px rgba(80, 0, 0, 0.07);
-  border: var(--primary-btn-hover-color);
+  /* border: var(--primary-btn-hover-color); */
 }
 
 /* Hamburger */
