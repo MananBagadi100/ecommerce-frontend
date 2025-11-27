@@ -17,7 +17,7 @@ const FeaturedProducts = ({featuredProducts , featuredProductsLoading}) => {
                     }}>
                     <CircularProgress 
                         size="50px"
-                        sx={{color: 'var(--loading-animation-color)'}}    
+                        /* sx={{color: 'var(--loading-animation-color)'}}  */
                     />
                 </Box>
             </div>

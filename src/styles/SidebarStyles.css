@@ -5,6 +5,7 @@
     flex-direction: column;
     box-sizing: border-box;
     background-color: var(--sidebar-filters-bg);
+
 }
 .sidebar-content-area {
     display: flex;
@@ -42,6 +43,7 @@
 @media (min-width : 650px) {
     .sidebar-full-container {
         box-sizing: border-box;
+        border: 1px solid rgba(0,0,0,0.1);
     }
     .sidebar-content-area {
         box-sizing: border-box;
