@@ -31,6 +31,7 @@
   border-radius: 12px;
   flex:0 0 clamp(280px,30%,360px);
   min-width:280px;
+  background-color: var(--product-card-bg-color);
 }
 a.Top-categories-link-wrapper {
   text-decoration: none;

@@ -60,6 +60,7 @@
   flex:0 0 clamp(280px,30%,360px);
   min-width:280px;
   padding: 8px;
+  background-color: var(--product-card-bg-color);
 }
 .home-customer-testimonials-heading {
   width: 100%;
@@ -193,7 +194,7 @@
     max-height: 100%;
     box-sizing: border-box;
     border-radius: 50%;
-    padding: 4px 12px;
+    padding: 4px 16px;
   }
   .home-customer-testimonial-title {
     width: 85%;
