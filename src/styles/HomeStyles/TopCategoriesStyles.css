@@ -54,6 +54,7 @@ a.Top-categories-link-wrapper {
   padding: 2px;
   border-radius: 12px;
   display: block; /* remove inline-image baseline gap */
+  background-color: var(--product-card-bg-color);
 }
 .home-category-txt {
   width: 100%;
