@@ -77,7 +77,7 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
-    background-color: var(--card-img-bg);
+    background-color: var(----prouduct-card-bg-color);
     border-radius: 8px;
 }
 #checkout-product-details {
@@ -217,7 +217,7 @@
         height: 100%;
         width: 100%;
         object-fit: contain;
-        background-color: var(--card-img-bg);
+        background-color: var(----prouduct-card-bg-color);
         border-radius: 8px;
     }
     .checkout-product-details {

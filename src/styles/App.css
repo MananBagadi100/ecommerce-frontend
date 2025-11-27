@@ -11,7 +11,7 @@
     --card-border: #010101;
     --card-shadow: rgba(21,92,54,0.09);
     --card-shadow-hover: rgba(21,92,54,0.16);
-    --card-img-bg: #cae4ff;
+    ----prouduct-card-bg-color: #e3f0ff;
     --product-prices-color:rgb(32, 96, 136);
     --loading-animation-color:black;
     --top-categories-bg: #fff7e6;
@@ -49,7 +49,7 @@ html,body,:root {
     --card-border: #0f0b29;
     --card-shadow: rgba(21,92,54,0.09);
     --card-shadow-hover: rgba(21,92,54,0.16);
-    --card-img-bg: #8bbbd6;
+    ----prouduct-card-bg-color: #8bbbd6;
     --product-prices-color:rgb(43, 43, 43);
     --loading-animation-color: rgb(222, 222, 222);
     --top-categories-bg: rgb(79, 96, 135);

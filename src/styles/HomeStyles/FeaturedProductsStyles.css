@@ -67,7 +67,7 @@ a.boss-best:active {
   box-sizing: border-box;
   padding: 2px;
   border-radius: 12px;
-  background-color: var(--card-img-bg);
+  background-color: var(----prouduct-card-bg-color);
 }
 .home-featured-product-details {
   width: 100%;
@@ -150,7 +150,7 @@ a.boss-best {
   box-sizing: border-box;
   padding: 2px;
   border-radius: 12px;
-  background-color: var(--card-img-bg);
+  background-color: var(----prouduct-card-bg-color);
   object-fit: contain;
 }
 .home-featured-product-details {

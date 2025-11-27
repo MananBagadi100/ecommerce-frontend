@@ -17,7 +17,7 @@
     height: 100%;
     object-fit: contain;
     border-radius: 12px;
-    background-color: var(--card-img-bg);
+    background-color: var(----prouduct-card-bg-color);
 }
 .productCard-wrapper {
     text-decoration: none;
