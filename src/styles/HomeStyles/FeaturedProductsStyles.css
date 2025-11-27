@@ -87,6 +87,7 @@ a.boss-best:active {
 }
 .home-featured-product-price {
   font-weight: bold;
+  font-size: 18px;
   color: var(--product-prices-color);
 }
 @media (max-width: 600px) {
