@@ -21,6 +21,7 @@ const TopCategoriesSection = () => {
                             <div className="top-category-image-label">Try Sunglasses</div>
                         </Link>
                     </div>
+                    
                     <div className="top-category-card">
                         <Link to="/products" className="top-category-card-link">
                             <img src={Laptops} alt='Image not found'className="top-category-image"/>

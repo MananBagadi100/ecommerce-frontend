@@ -22,8 +22,15 @@ export const getAllTheCategoryItems = (url) => {
     return axios.get(url)
 }
 //get the featured product details
-export const getFeaturedProducts = (id1 , id2 , id3) => {
+export const getFeaturedProducts = (id1 ,id2 ,id3 ,id4 ,id5 ,id6) => {
     return (
-        [client.get(`/${id1}`) , client.get(`/${id2}`) , client.get(`/${id3}`)]
+        [
+            client.get(`/${id1}`) , 
+            client.get(`/${id2}`) , 
+            client.get(`/${id3}`) ,
+            client.get(`/${id4}`) ,
+            client.get(`/${id5}`) ,
+            client.get(`/${id6}`) 
+        ]
     )
 }
