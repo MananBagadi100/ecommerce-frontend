@@ -8,11 +8,13 @@ import ProfileImg2 from '../assets/ProfileImg2.jpg'
 import ProfileImg3 from '../assets/ProfileImg3.jpg'
 
 import HeroSection from "../components/HomeSections/HeroSection.jsx"
+import TopCategoriesSection from "../components/HomeSections/TopCategoriesSection.jsx"
 const Home= () => { 
 
     return (
         <div className="home-page-full-container">
             <HeroSection />
+            <TopCategoriesSection />
         </div>
         
     )
