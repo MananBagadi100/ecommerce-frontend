@@ -9,6 +9,7 @@ import ProfileImg3 from '../assets/ProfileImg3.jpg'
 import HeroSection from "../components/HomeSections/HeroSection.jsx"
 import TopCategoriesSection from "../components/HomeSections/TopCategoriesSection.jsx"
 import TopProductsSection from "../components/HomeSections/TopProductsSection.jsx"
+import CustomerTestimonialsSection from "../components/HomeSections/CustomerTestimonialsSection.jsx"
 const Home= () => { 
 
     return (
@@ -16,6 +17,7 @@ const Home= () => {
             <HeroSection />
             <TopCategoriesSection />
             <TopProductsSection />
+            <CustomerTestimonialsSection />
         </div>
         
     )

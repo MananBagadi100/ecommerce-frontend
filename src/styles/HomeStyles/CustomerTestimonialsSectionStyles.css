@@ -1,0 +1,23 @@
+.customer-review-full-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+.customer-review-title {
+    display: flex;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.customer-review-content-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 8px;
+    box-sizing: border-box;
+}
