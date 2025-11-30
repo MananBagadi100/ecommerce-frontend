@@ -1,30 +1,54 @@
 import { useEffect, useState } from 'react'
 import { getFeaturedProducts } from '../../services/GetService'
 import './../../styles/HomeStyles/TopProductsSectionStyles.css'
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 import SpotlightLayout from './SpotlightLayout.jsx'
 const TopProductsSection = () => {
     const [topProducts , setTopProducts] = useState([])
     useEffect(() => {
         const fetchData = async () => {
-            const response = await Promise.all(getFeaturedProducts(1,2,3,5,6,7))  //getting all top prouducts
+            const response = await Promise.all(getFeaturedProducts(123,8,95,173,191,179))  //getting all top prouducts
             setTopProducts(response.map(res => res.data))   //putting all the products data in state
         }
         fetchData()
     },[])
-    console.log(topProducts)  
+    console.log(topProducts[0])  
     return (
         <div className='top-products-full-container'>
             <div className="top-products-title">Top Products</div>
             <div className="top-products-content-area">
                 <div className="top-products-section">
-                    <SpotlightLayout 
-                        spotlightProduct={topProducts[0]}
-                        supportingProductTop={topProducts[1]}
-                        supportingProductBottom={topProducts[2]}
-                    />
+                    {
+                        topProducts.length === 0 ? (
+                        //    <Box sx={{ display: 'flex' }}>
+                        //         <CircularProgress />
+                        //     </Box> 
+                        <div style={{fontSize:'100px'}}>loading ....</div>
+                        ) : (
+                            <SpotlightLayout 
+                                spotlightProduct={topProducts[0]}
+                                supportingProductTop={topProducts[1]}
+                                supportingProductBottom={topProducts[2]}
+                            />
+                        )
+                    }
                 </div>
                 <div className="top-products-section">
-                    {/* <SpotlightLayout /> */}
+                    {
+                        topProducts.length === 0 ? (
+                        //    <Box sx={{ display: 'flex' }}>
+                        //         <CircularProgress />
+                        //     </Box> 
+                        <div style={{fontSize:'100px'}}>loading ....</div>
+                        ) : (
+                            <SpotlightLayout 
+                                spotlightProduct={topProducts[3]}
+                                supportingProductTop={topProducts[4]}
+                                supportingProductBottom={topProducts[5]}
+                            />
+                        )
+                    }
                 </div>
                 
             </div>
