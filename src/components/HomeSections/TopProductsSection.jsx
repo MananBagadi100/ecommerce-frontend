@@ -21,10 +21,15 @@ const TopProductsSection = () => {
                 <div className="top-products-section">
                     {
                         topProducts.length === 0 ? (
-                        //    <Box sx={{ display: 'flex' }}>
-                        //         <CircularProgress />
-                        //     </Box> 
-                        <div style={{fontSize:'100px'}}>loading ....</div>
+                            <Box sx={{
+                                display: 'flex',
+                                width: '100%',
+                                height: '100%',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                                <CircularProgress />
+                            </Box> 
                         ) : (
                             <SpotlightLayout 
                                 spotlightProduct={topProducts[0]}
@@ -37,10 +42,15 @@ const TopProductsSection = () => {
                 <div className="top-products-section">
                     {
                         topProducts.length === 0 ? (
-                        //    <Box sx={{ display: 'flex' }}>
-                        //         <CircularProgress />
-                        //     </Box> 
-                        <div style={{fontSize:'100px'}}>loading ....</div>
+                            <Box sx={{
+                                display: 'flex',
+                                width: '100%',
+                                height: '100%',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                                <CircularProgress />
+                            </Box>
                         ) : (
                             <SpotlightLayout 
                                 spotlightProduct={topProducts[3]}
