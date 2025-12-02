@@ -8,7 +8,7 @@ const TopProductsSection = () => {
     const [topProducts , setTopProducts] = useState([])
     useEffect(() => {
         const fetchData = async () => {
-            const response = await Promise.all(getFeaturedProducts(123,8,95,173,191,179))  //getting all top prouducts
+            const response = await Promise.all(getFeaturedProducts(123,8,95,173,179,191))  //getting all top prouducts
             setTopProducts(response.map(res => res.data))   //putting all the products data in state
         }
         fetchData()

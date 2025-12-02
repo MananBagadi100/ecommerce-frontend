@@ -9,22 +9,24 @@ const CustomerTestimonialsSection = () => {
         dots: true,
         infinite: true,
         slidesToScroll: 1,
-        slideToShow: 3,
+        slidesToShow: 3,
+        centerMode : true,
         autoplay: true,
         speed: 2500,
         autoplaySpeed: 3000,
+        pauseOnHover: true,
         cssEase: "linear",
         responsive : [
             {
                 breakpoint : 734,
                 settings : {
-                    slideToShow : 1
+                    slidesToShow : 1
                 }
             },
             {
                 breakpoint : 1024,
                 settings : {
-                    slideToShow : 2
+                    slidesToShow : 2
                 }
             }
         ]

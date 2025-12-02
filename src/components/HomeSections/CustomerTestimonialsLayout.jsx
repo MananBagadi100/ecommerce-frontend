@@ -1,5 +1,4 @@
 import './../../styles/HomeStyles/CustomerTestimonialsLayoutStyles.css'
-import ProfilePic from './../../assets/ProfilePic1.png'
 const CustomerTestimonialsLayout = ({customer}) => {
     return (
         <div className='testimonials-layout-full-card'>
