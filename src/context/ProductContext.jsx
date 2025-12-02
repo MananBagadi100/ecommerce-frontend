@@ -43,7 +43,6 @@ export const ProductProvider = ({children}) => {
             }
         }
 
-        console.log("The result after FILTERING is ",result)
         setFilteredProducts(result)
     }
     useEffect (() => {
@@ -64,7 +63,7 @@ export const ProductProvider = ({children}) => {
             sorting,
             setSorting,
             filteredProducts,
-            setFilteredProducts
+            setFilteredProducts,
         }}>
             {children}
         </ProductContext.Provider>

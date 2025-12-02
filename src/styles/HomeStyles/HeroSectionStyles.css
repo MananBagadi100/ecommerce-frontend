@@ -65,7 +65,7 @@
 .hero-buy-now-btn {
     display: flex;
     padding: 6px 12px;
-    border-radius: 16px;
+    border-radius: 20px;
     font-weight: 500;
 }
 .hero-learn-more-btn {
@@ -73,7 +73,15 @@
     color: var(--btn-txt);
 }
 .hero-buy-now-btn {
+    display: flex;
     color: var(--btn-bg);
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,1);
+    /* box-shadow: ; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-sizing: border-box;
+    line-height: normal;
+    font-size: inherit;
 }
 .hero-image-wrapper {
     display: flex;
@@ -120,6 +128,9 @@
     .hero-buy-now-btn {
         padding: 8px 16px;
         font-weight: 500;
+    }
+    .hero-buy-now-btn {
+        border-radius: 20px;
     }
     .hero-learn-more-btn:hover {
         background-color: var(--btn-hover-bg);

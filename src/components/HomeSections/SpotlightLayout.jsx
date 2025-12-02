@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import './../../styles/HomeStyles/SpotlightLayoutStyles.css'
 const SpotlightLayout = ({spotlightProduct , supportingProductTop , supportingProductBottom}) => {
-    console.log('the spotlight product is ',spotlightProduct)
     return (
         <div className="spotlight-full-container">
             <div className="spotlight-left-product">
