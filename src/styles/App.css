@@ -11,8 +11,8 @@
     --card-shadow: rgba(21,92,54,0.09);
     --card-shadow-hover: rgba(21,92,54,0.16);
     --product-prices-color:rgb(32, 96, 136);
-    --top-categories-bg: #F8FAFD;
     --form-body: #bbdeff;
+    --section-alt-bg: #EEF5FF;   /* soft cool blue for alternating contrast on home page*/
 }
 html,body,:root {
     margin: 0px;
@@ -45,7 +45,6 @@ html,body,:root {
     --card-shadow: rgba(21,92,54,0.09);
     --card-shadow-hover: rgba(21,92,54,0.16);
     --product-prices-color:rgb(43, 43, 43);
-    --top-categories-bg: rgb(79, 96, 135);
 }
 html, body {
     width: 100vw;

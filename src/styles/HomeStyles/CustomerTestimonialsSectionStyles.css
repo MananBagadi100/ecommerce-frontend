@@ -1,0 +1,36 @@
+.customer-review-full-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+.customer-review-title {
+    display: flex;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.customer-review-content-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 28px 8px;
+    box-sizing: border-box;
+}
+.customer-review-slider-area {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+@media (min-width: 734px) {
+    .customer-review-title {
+        font-size: 28px;
+    }
+}
