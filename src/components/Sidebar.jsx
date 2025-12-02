@@ -4,7 +4,10 @@ import CloseIcon from '@mui/icons-material/Close';
 import RatingFilter from './filters/RatingFilters';
 import PriceFilters from './filters/PriceFilters';
 import ProductSorting from './filters/ProductSorting';
+import { useContext } from 'react';
+import { ProductContext } from '../context/ProductContext';
 const Sidebar = ({setIsDrawerOpen,isMobile}) => {
+    const {resetFilters} = useContext(ProductContext)
     return (
         <div className="sidebar-full-container">
             <div className="sidebar-content-area">
@@ -26,6 +29,9 @@ const Sidebar = ({setIsDrawerOpen,isMobile}) => {
                     <RatingFilter />
                     <PriceFilters />
                     <ProductSorting />
+                    <button onClick={resetFilters}>
+                        Reset Filters
+                    </button>
                 </div>
                 
             </div>
