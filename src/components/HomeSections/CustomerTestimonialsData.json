@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Sarah Jenkins",
+    "profile_photo": "https://randomuser.me/api/portraits/women/44.jpg",
+    "review": "Absolutely loved the experience! The attention to detail was impressive and the team went above and beyond to ensure I was satisfied."
+  },
+  {
+    "name": "Marcus Chen",
+    "profile_photo": "https://randomuser.me/api/portraits/men/32.jpg",
+    "review": "Great product overall. There were a few minor hiccups during shipping, but customer support resolved them quickly. Would recommend."
+  },
+  {
+    "name": "Elena Rodriguez",
+    "profile_photo": "https://randomuser.me/api/portraits/women/68.jpg",
+    "review": "Five stars! It exceeded my expectations in every way. The quality is top-notch and it arrived earlier than scheduled."
+  },
+  {
+    "name": "David Smith",
+    "profile_photo": "https://randomuser.me/api/portraits/men/85.jpg",
+    "review": "It was okay. Good value for the price, but I think the interface could be a bit more intuitive for new users."
+  },
+  {
+    "name": "Priya Patel",
+    "profile_photo": "https://randomuser.me/api/portraits/women/29.jpg",
+    "review": "Fantastic service! I've been a loyal customer for years and they never disappoint. Highly recommended to anyone looking for reliability."
+  }
+]

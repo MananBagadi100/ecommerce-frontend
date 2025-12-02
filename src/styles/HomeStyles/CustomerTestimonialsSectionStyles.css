@@ -21,3 +21,8 @@
     padding: 20px 8px;
     box-sizing: border-box;
 }
+.customer-review-slider-area {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+}
