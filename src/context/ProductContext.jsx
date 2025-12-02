@@ -2,13 +2,13 @@ import { createContext, useEffect, useState } from "react";
 export const ProductContext = createContext()
 export const ProductProvider = ({children}) => {
     
-    const [allProducts , setAllProducts] = useState([])
-    const [searchText , setSearchText] = useState('')
-    const [selectedCategories , setSelectedCategories] = useState([])
-    const [minRating , setMinRating] = useState(0) 
-    const [priceRange , setPriceRange] = useState(['','']) 
-    const [sorting , setSorting] = useState('')
-    const [filteredProducts , setFilteredProducts] = useState([])
+    const [allProducts , setAllProducts] = useState([]) //contains all the products
+    const [searchText , setSearchText] = useState('')   //search text in product search bar
+    const [selectedCategories , setSelectedCategories] = useState([])   //selected category filters
+    const [minRating , setMinRating] = useState(0)  // contains the min rating for rating filter
+    const [priceRange , setPriceRange] = useState(['',''])      //filter for price range
+    const [sorting , setSorting] = useState('')                 //sorting the products
+    const [filteredProducts , setFilteredProducts] = useState([])   //the products after filtering , has everything if no filtered selected
     
     //filtering logic
     function applyFilters (selectedCategories,minRating,priceRange,sorting,searchText) {
@@ -43,8 +43,15 @@ export const ProductProvider = ({children}) => {
             }
         }
 
-        console.log("The result after FILTERING is ",result)
         setFilteredProducts(result)
+    }
+    // function to reset all the filters to none
+    function resetFilters () {
+        setSearchText('')
+        setSelectedCategories([])
+        setMinRating(0)
+        setPriceRange(['',''])
+        setSorting('')
     }
     useEffect (() => {
         applyFilters(selectedCategories,minRating,priceRange,sorting,searchText)
@@ -64,7 +71,8 @@ export const ProductProvider = ({children}) => {
             sorting,
             setSorting,
             filteredProducts,
-            setFilteredProducts
+            setFilteredProducts,
+            resetFilters
         }}>
             {children}
         </ProductContext.Provider>

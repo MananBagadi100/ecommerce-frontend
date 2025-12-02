@@ -25,7 +25,6 @@ function App() {
       
       try {
         const answer = await axios.post(`${backendRouteURL}/api/authCheck`,{},{withCredentials:true})
-        console.log('answer in app.jsx is ',answer)
         if(answer.data.isLoggedIn) {  //if token is correct
           setLoginState(true)
         }

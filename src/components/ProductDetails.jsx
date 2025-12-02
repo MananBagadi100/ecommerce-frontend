@@ -5,9 +5,9 @@ import '../styles/ProductDetailsStyles.css'
 import { cartContext } from "../context/CartContext";
 const ProductDetails = () => {
     const value=useContext(cartContext)
+    const navigate = useNavigate()
     const [ product_quantity, setProductQuantity ] = useState(1)
     const [ product_details ,setProductDetails]= useState(null)
-    const navigate = useNavigate()
     const params = useParams()
     const prod_id = params.product_id
     function handleBuyNowBtn (item) {

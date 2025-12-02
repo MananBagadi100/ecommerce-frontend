@@ -1,4 +1,5 @@
 import { createContext,useContext,useEffect,useState } from "react"
+import { useNavigate } from "react-router-dom"
 export const cartContext = createContext()
 export const CartProvider = ({children}) => {
     //putting cart in local storage so that it does not disapper after every reload
@@ -109,7 +110,15 @@ export const CartProvider = ({children}) => {
     }
 
     return (
-        <cartContext.Provider value={{cart,setCart,addToCart,removeFromCart,deleteFromCart,calculateTotal,addManyProductsToCart}}>
+        <cartContext.Provider value={{
+            cart,
+            setCart,
+            addToCart,
+            removeFromCart,
+            deleteFromCart,
+            calculateTotal,
+            addManyProductsToCart,
+        }}>
             {children}
         </cartContext.Provider>
     )

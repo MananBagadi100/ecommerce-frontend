@@ -12,8 +12,7 @@ const TopProductsSection = () => {
             setTopProducts(response.map(res => res.data))   //putting all the products data in state
         }
         fetchData()
-    },[])
-    console.log(topProducts[0])  
+    },[]) 
     return (
         <div className='top-products-full-container'>
             <div className="top-products-title">Top Products</div>
