@@ -24,7 +24,7 @@ const HeroSection = () => {
                         <Link to='/cart' className="hero-buy-now-btn" onClick={handleBuyNowBtn}>Buy Now</Link>
                     </div>
                 </div>
-                <Link to='/products' className='hero-image-wrapper'>
+                <Link to='/products/98' className='hero-image-wrapper'>
                     <img src={Rolex} alt="Image not found" className='hero-image'/>
                 </Link>
             </div>

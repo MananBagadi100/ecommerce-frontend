@@ -3,7 +3,6 @@ import { getProductDetails } from "../services/GetService";
 import { useContext, useEffect, useState } from "react";
 import '../styles/ProductDetailsStyles.css'
 import { cartContext } from "../context/CartContext";
-import { ProductContext } from "../context/ProductContext";
 const ProductDetails = () => {
     const value=useContext(cartContext)
     const navigate = useNavigate()
