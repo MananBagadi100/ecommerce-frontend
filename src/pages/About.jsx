@@ -1,4 +1,4 @@
-import { useState } from "react"
+// import { motion } from "motion/react"
 import './../styles/AboutStyles.css'
 const About= () => {
     return (
