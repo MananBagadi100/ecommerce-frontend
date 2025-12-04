@@ -3,7 +3,9 @@ import { getFeaturedProducts } from '../../services/GetService'
 import './../../styles/HomeStyles/TopProductsSectionStyles.css'
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import * as motion from "motion/react-client"
 import SpotlightLayout from './SpotlightLayout.jsx'
+import { easeIn, easeOut } from 'motion';
 const TopProductsSection = () => {
     const [topProducts , setTopProducts] = useState([])
     useEffect(() => {
@@ -17,7 +19,16 @@ const TopProductsSection = () => {
         <div className='top-products-full-container'>
             <div className="top-products-title">Top Products</div>
             <div className="top-products-content-area">
-                <div className="top-products-section">
+                <motion.div 
+                    initial={{opacity:0,y:30}}
+                    whileInView={{opacity:1,y:0}}
+                    viewport={{once:true}}
+                    transition={{
+                        duration:1,
+                        delay:0.3,
+                        ease:easeOut
+                    }}
+                    className="top-products-section">
                     {
                         topProducts.length === 0 ? (
                             <Box sx={{
@@ -37,8 +48,18 @@ const TopProductsSection = () => {
                             />
                         )
                     }
-                </div>
-                <div className="top-products-section">
+                </motion.div>
+
+                <motion.div
+                    initial={{opacity:0,y:30}}
+                    whileInView={{opacity:1,y:0}}
+                    viewport={{once:true}}
+                    transition={{
+                        duration:1,
+                        delay:0.5,
+                        ease:easeOut
+                    }}
+                    className="top-products-section">
                     {
                         topProducts.length === 0 ? (
                             <Box sx={{
@@ -58,8 +79,7 @@ const TopProductsSection = () => {
                             />
                         )
                     }
-                </div>
-                
+                </motion.div>
             </div>
         </div>
     )
