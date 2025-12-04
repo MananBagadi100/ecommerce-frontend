@@ -1,8 +1,9 @@
 import { useState } from "react"
+import './../styles/AboutStyles.css'
 const About= () => {
     return (
-        <div>
-            <div style={{ fontWeight: "bold", margin: "20px", color:"var(--text-color)"}}>This is a project demonstration build by Manan Bagadi</div>
+        <div className="about-full-container">
+            <div className="about-info-area">This is a project demonstration build by Manan Bagadi</div>
         </div>
     )
 }
