@@ -58,5 +58,7 @@
   }
   .products-display-area {
     padding: 24px 16px;
+    /* width: 100%;
+    height: auto; */
   }
 }
