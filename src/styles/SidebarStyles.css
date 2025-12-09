@@ -39,6 +39,14 @@
     flex-direction: column;
     gap: 8px;
 }
+.sidebar-reset-button {
+    display: flex;
+    background-color: var(--btn-bg);
+    color: var(--btn-txt);
+    margin-top: 8px;
+    border-radius: 8px;
+    padding: 4px;
+}
 
 @media (min-width : 650px) {
     .sidebar-full-container {

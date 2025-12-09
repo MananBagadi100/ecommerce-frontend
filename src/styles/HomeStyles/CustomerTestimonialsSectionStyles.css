@@ -29,6 +29,10 @@
     box-sizing: border-box;
 }
 
+.slick-slide > div {
+    display: flex;
+    justify-content: center;
+}
 @media (min-width: 734px) {
     .customer-review-title {
         font-size: 28px;

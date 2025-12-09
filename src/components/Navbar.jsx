@@ -59,11 +59,11 @@ const Navbar = () => {
             {loginBtnValue}
           </NavLink>
         </li>
-        <li className='nav-btn-item-2'>
+        {/* <li className='nav-btn-item-2'>
           <button className='nav-toggle-theme-btn' onClick={toggleTheme}>
             {themeBtnTxt}
           </button>
-        </li>
+        </li> */}
       </ul>
     </nav>
   )
