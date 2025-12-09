@@ -15,7 +15,7 @@ const Navbar = () => {
     { path: '/contact-us', label: 'Contact Us' },
     { path: '/cart', label: 'Cart' },
   ]
-  //states
+  //states for navbar
   const [loginBtnValue, setLoginBtnValue] = useState('Login')
   const [themeBtnTxt, setThemeBtnTxt] = useState('☀️')
   const [theme, setTheme] = useState('light')
