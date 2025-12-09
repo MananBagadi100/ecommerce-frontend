@@ -29,7 +29,7 @@ const Sidebar = ({setIsDrawerOpen,isMobile}) => {
                     <RatingFilter />
                     <PriceFilters />
                     <ProductSorting />
-                    <button onClick={resetFilters}>
+                    <button className='sidebar-reset-button' onClick={resetFilters}>
                         Reset Filters
                     </button>
                 </div>
