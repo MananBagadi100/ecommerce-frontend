@@ -2,7 +2,6 @@ import '../styles/NavbarStyles.css'
 import {NavLink} from 'react-router-dom'
 import {useState, useContext, useEffect} from 'react'
 import {LoginContext} from '../context/LoginContext'
-import { MenuOpen } from '@mui/icons-material'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import HomeIcon from '@mui/icons-material/Home';
@@ -12,7 +11,6 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import InfoIcon from '@mui/icons-material/Info';
 import LoginIcon from '@mui/icons-material/Login';
 import CloseIcon from '@mui/icons-material/Close';
-import { map } from 'motion/react-client'
 const Navbar = () => {
     const [drawerStatus , setDrawerStatus] = useState(false)
     const navItems = [
