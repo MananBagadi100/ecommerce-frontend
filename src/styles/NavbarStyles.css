@@ -134,6 +134,7 @@
     .navbar-desktop-list-item {
         color: var(--btn-txt);
         font-weight: bold;
+        font-size: 18px;
     }
     .navbar-desktop-login-btn {
         text-decoration: none;
