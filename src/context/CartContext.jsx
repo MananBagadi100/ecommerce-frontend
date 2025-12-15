@@ -23,12 +23,13 @@ export const CartProvider = ({children}) => {
             setCart(JSON.parse(savedCart))
         }
     },[])
+
     // Add item to cart
     const addToCart = (item) => {
     setCart((prevCart) => {
         // Check if item is already in cart
         //'prod' is each individual product object
-        const exists = prevCart.find((prod) => prod.id === item.id);
+        const exists = prevCart.find((prod) => prod.id === item.id)
         if (exists) {
         // if it exists, increase quantity
         return prevCart.map((prod) =>
@@ -43,30 +44,31 @@ export const CartProvider = ({children}) => {
             price: item.price,
             quantity: 1,
             image: item.images[0]
-         }];
+         }]
         }
-    });
-    };
+    })
+    }
 
     // Subtract (remove one quantity) or remove item from cart
     const removeFromCart = (id) => {
     setCart((prevCart) => {
         //if existing or not
-        const existing = prevCart.find((prod) => prod.id === id);
+        const existing = prevCart.find((prod) => prod.id === id)
         if (!existing) return prevCart;
 
         if (existing.quantity === 1) {
             // Remove completely if only one left
-            return prevCart.filter((prod) => prod.id !== id);
+            return prevCart.filter((prod) => prod.id !== id)
             } 
         else {
             // Otherwise, subtract 1
             return prevCart.map((prod) =>
             prod.id === id ? { ...prod, quantity: prod.quantity - 1 } : prod
-                );
+                )
         }
-    });
-    };
+    })
+    }
+
     //remove all of an item
     const deleteFromCart = (id) => {
         setCart((prevCart) => prevCart.filter((prod) => prod.id !== id))
@@ -79,19 +81,14 @@ export const CartProvider = ({children}) => {
         ))
         return total.toFixed(2)
     }
-    // const searchInCart = (id) => {
-    //     const value=cart.find((prod) => prod.id===id)
-    //     return (value ? value : null)
 
-    // }
     //Add multiple items to cart
     const addManyProductsToCart = (item,quantityToAdd) => {
         setCart((prevCart) => {
             const exists = prevCart.find((prod) => prod.id===item.id)
             if (exists) {       //if product exists we directly update the quantity
                 return prevCart.map((prod) => {
-                    return prod.id === item.id ? {...prod, quantity: prod.quantity + quantityToAdd } 
-                    : prod 
+                    return prod.id === item.id ? {...prod, quantity: prod.quantity + quantityToAdd } : prod 
                     
                 })
             }
@@ -118,6 +115,7 @@ export const CartProvider = ({children}) => {
             deleteFromCart,
             calculateTotal,
             addManyProductsToCart,
+            /* buyNowProduct */
         }}>
             {children}
         </cartContext.Provider>

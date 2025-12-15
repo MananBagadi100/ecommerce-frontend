@@ -46,6 +46,8 @@
     margin-top: 8px;
     border-radius: 8px;
     padding: 4px;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width : 650px) {

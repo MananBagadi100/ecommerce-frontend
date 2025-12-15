@@ -59,7 +59,7 @@
 @media (min-width: 650px) {
     .productCard-container {
         border-radius: 20px;
-        height: 100%;
+        /* height: 100%; */
     }
     .product-image-wrapper {
         width: 100%;
