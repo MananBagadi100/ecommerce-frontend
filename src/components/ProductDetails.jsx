@@ -12,12 +12,16 @@ const ProductDetails = () => {
     const [ product_details ,setProductDetails]= useState(null) //state to store product details
     const params = useParams()
     const prod_id = params.product_id
-    const {addManyProductsToCart,buyNowProduct} = useContext(cartContext)
-    //handles buy now button functionality
-    function handleBuyNowBtn (product,qty) {
-        buyNowProduct(product,qty)
-        navigate('/cart')
+    const {cart,addManyProductsToCart} = useContext(cartContext)
+    // Buy Now button functionality
+    function handleBuyNowBtn (product,qty) {   
+        const exists = cart.find((item) => item.id === product.id)
+        if (!exists) {  //If product does not exist in the cart yet
+            addManyProductsToCart(product,qty)
+        }
+        navigate('/cart')   // Navigate to the cart immediately
     }
+    
     function convertFirstCharToUpperCase(str) {
         let updatedString = ''
         for (let i = 0; i < str.length; i++) {
