@@ -90,8 +90,7 @@ export const CartProvider = ({children}) => {
             const exists = prevCart.find((prod) => prod.id===item.id)
             if (exists) {       //if product exists we directly update the quantity
                 return prevCart.map((prod) => {
-                    return prod.id === item.id ? {...prod, quantity: prod.quantity + quantityToAdd } 
-                    : prod 
+                    return prod.id === item.id ? {...prod, quantity: prod.quantity + quantityToAdd } : prod 
                     
                 })
             }
@@ -109,6 +108,20 @@ export const CartProvider = ({children}) => {
         })
     }
 
+    // Buy now button functionality
+    const buyNowProduct = (product,qty) => {
+        const exists = cart.find((item) => item.id === product.id)
+        if (exists) {       //If the product exists in cart
+            console.log('Do nothing !')
+            return
+        }
+        else {
+            console.log('Add to cart with specified qty')     //If product does not exist in cart
+            addManyProductsToCart(product,qty)
+            return
+        }
+    }
+
     return (
         <cartContext.Provider value={{
             cart,
@@ -118,6 +131,7 @@ export const CartProvider = ({children}) => {
             deleteFromCart,
             calculateTotal,
             addManyProductsToCart,
+            buyNowProduct
         }}>
             {children}
         </cartContext.Provider>

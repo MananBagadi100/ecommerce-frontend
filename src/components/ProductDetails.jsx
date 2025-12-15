@@ -7,14 +7,16 @@ import '../styles/ProductDetailsStyles.css'
 import { cartContext } from "../context/CartContext";
 const ProductDetails = () => {
     const value=useContext(cartContext)
+    const navigate = useNavigate()
     const [ productQuantity, setProductQuantity ] = useState(1) //quantity of the selected product
     const [ product_details ,setProductDetails]= useState(null) //state to store product details
     const params = useParams()
     const prod_id = params.product_id
+    const {addManyProductsToCart,buyNowProduct} = useContext(cartContext)
     //handles buy now button functionality
-    function handleBuyNowBtn (item) {
-        value.addToCart(item)
-        console.log('DEBUG called the handle buy now again')
+    function handleBuyNowBtn (product,qty) {
+        buyNowProduct(product,qty)
+        navigate('/cart')
     }
     function convertFirstCharToUpperCase(str) {
         let updatedString = ''
@@ -133,10 +135,16 @@ const ProductDetails = () => {
                         </button>
                     </div>
                     <div className="product-details-info-btn-wrapper">
-                        <button className="product-details-info-addToCart-btn" >            {/* onClick={value.addManyProductsToCart( product_details ,product_quantity)}*/}
+                        <button 
+                            className="product-details-info-addToCart-btn" 
+                            onClick={() => addManyProductsToCart(product_details,productQuantity)}
+                        >            {/* onClick={value.addManyProductsToCart( product_details ,product_quantity)}*/}
                             Add To Cart
                         </button>
-                        <button className="product-details-info-buyNow-btn" > {/* onClick={handleBuyNowBtn(product_details) */ }
+                        <button 
+                            className="product-details-info-buyNow-btn" 
+                            onClick={() => handleBuyNowBtn(product_details,productQuantity)}
+                        > {/* onClick={handleBuyNowBtn(product_details) */ }
                             Buy Now
                         </button>
                     </div>
@@ -146,7 +154,7 @@ const ProductDetails = () => {
                         <div className="product-details-reviews-title">Reviews</div>
                         {
                             product_details.reviews.map((review) => (
-                                <div className="product-details-review-info">
+                                <div className="product-details-review-info" key={`${review.reviewerName}-${review.reviewerEmail}-${review.rating}-${review.comment}`}>
                                     <div className="product-details-reviewerName">{review.reviewerName}</div>
                                     <div className="product-details-reviewerEmail">{review.reviewerEmail}</div>
                                     <div className="product-details-review-rating">{review.rating} ⭐️</div>
