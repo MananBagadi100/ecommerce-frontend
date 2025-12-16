@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { cartContext } from '../../context/CartContext'
 import { getProductDetails } from '../../services/GetService'
 const HeroSection = () => {
-    const navigate = useNavigate()  //used to navigate
+    const navigate = useNavigate()  
     const {addToCart} = useContext(cartContext)
     async function handleBuyNowBtn () {
         const response = await getProductDetails(98)
