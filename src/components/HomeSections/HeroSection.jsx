@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../../styles/HomeStyles/HeroSectionStyles.css'
 import Rolex from './../../assets/Rolex.png'
 import { useContext } from 'react'
 import { cartContext } from '../../context/CartContext'
 import { getProductDetails } from '../../services/GetService'
 const HeroSection = () => {
+    const navigate = useNavigate()
     const {addToCart} = useContext(cartContext)
     async function handleBuyNowBtn () {
         const response = await getProductDetails(98)
